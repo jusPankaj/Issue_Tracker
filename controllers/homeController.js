@@ -9,7 +9,7 @@ const homepage = async (req, res) => {
       title: "Issue Tracker | Home",
       projects,
     });
-  } catch (error) {
+  } catch (err) {
     console.log("Error", err);
     return;
   }
