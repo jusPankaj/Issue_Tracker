@@ -1,0 +1,30 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light"
+  style="background-color: #182034"
+>
+  <div class="container">
+    <a class="navbar-brand" href="/" style="font-weight: bold; color: #007bff"
+      >Issue Tracker</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <% if (title === "Project") { %>
+        <li class="nav-item"><%- include('_issueForm') %></li>
+        <% } else { %>
+        <li class="nav-item"><%- include('_projectForm') %></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
