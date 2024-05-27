@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card border border-1 mb-4" style="background-color: #182034">
+        <div class="card-body">
+          <h3 class="card-title text-light p-3 mb-3">
+            Project: <%= project.name %>
+          </h3>
+          <h4 class="card-subtitle text-light p-3 mb-3">
+            Author: <%= project.author %>
+          </h4>
+          <h5 class="card-subtitle text-light p-3 mb-3">
+            Description: <%= project.description %>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include Issues Partial -->
+  <%- include('./partials/_issue'); %>
+</div>

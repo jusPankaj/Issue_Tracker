@@ -1,0 +1,102 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn m-auto"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+  style="background-color: transparent; color: #ffffff; border-color: #007bff"
+>
+  Create New Project
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-color: #182034; color: white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create a new project</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <form
+        class="border border-dark border-3"
+        action="/project/create"
+        method="POST"
+      >
+        <div class="row mb-3 m-auto">
+          <label for="namelabel" class="col-sm-4 col-form-label">Name</label>
+          <div class="col-sm-8">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name of your project"
+              required
+              class="form-control"
+              id="namelabel"
+              style="background-color: lightgrey; color: black"
+            />
+          </div>
+        </div>
+        <div class="row mb-3 m-auto">
+          <label for="inputPassword3" class="col-sm-4 col-form-label"
+         
+            >Description</label
+          >
+          <div class="col-sm-8">
+            <textarea
+              name="description"
+              placeholder="Write something about your project..."
+              required
+              class="form-control"
+              id="inputPassword3"
+              style="height: 100px; background-color: lightgrey; color: black""
+            ></textarea>
+          </div>
+        </div>
+        <div class="row mb-3 m-auto">
+          <label for="authorlabel" class="col-sm-4 col-form-label"
+            >Author</label
+          >
+          <div class="col-sm-8">
+            <input
+              type="text"
+              name="author"
+              placeholder="Author"
+              required
+              class="form-control"
+              id="authorlabel"
+              style="background-color: lightgrey; color: black"
+            />
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button
+            type="submit"
+            class="btn"
+            style="
+              background-color: #007bff;
+              color: #000000;
+              border-color: #007bff;
+            "
+          >
+            Create project
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
