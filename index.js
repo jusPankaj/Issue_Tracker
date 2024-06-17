@@ -22,9 +22,9 @@ app.set("views", path.join(__dirname, "views"));
 app.use(expressLayouts);
 app.use("/", rootRouter);
 
-app.get("/", (req, res) => {
-  res.send("<h1>hello Issue Tracker</h1");
-});
+// app.get("/", (req, res) => {
+//   res.send("<h1>hello Issue Tracker</h1");
+// });
 
 app.listen(port, (err) => {
   if (err) {
